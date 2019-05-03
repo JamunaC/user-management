@@ -1,0 +1,39 @@
+<div fxLayout="row" fxLayoutAlign="center center" class="loginView">
+    <mat-card fxFlex="35%">
+   <div class="mat-header">LOGIN</div>
+      <form novalidate (ngSubmit)="loginForm.valid && onSubmitLoginForm(loginForm)" #loginForm="ngForm">
+        <div fxLayout="row wrap" fxLayoutWrap fxLayoutAlign="space-evenly space-evenly" class="layout-margin">
+          <mat-form-field appearance="legacy" floatLabel="always" fxFlex="100">
+            <mat-label>User name / Email / Mobile Number</mat-label>
+            <input matInput type="text" name="username" required [(ngModel)]="loginModel.username" #username="ngModel"
+              autocomplete="off">
+            <mat-error *ngIf="username.hasError('required')">
+             This field is required
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field appearance="legacy" floatLabel="always" fxFlex="100">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" name="password" required [(ngModel)]="loginModel.password" #password="ngModel"
+              autocomplete="off">
+            <mat-error *ngIf="password.hasError('required')">
+              Password is required
+            </mat-error>
+          </mat-form-field>
+          <div fxFlex="100" style="text-align:center;">
+          <button mat-raised-button color="primary" type="submit">
+            Login
+          </button>
+        </div>
+        <br>
+          <div fxFlex="100" fxLayoutAlign="center center">
+            <div style="text-align:center;margin-top:10px;">
+              <a href="javascript:void(0)" color="primary" (click)="signupview()">
+                Sign Up
+              </a>
+            </div>
+          </div>
+        </div>
+      </form>
+    </mat-card>
+  </div>
+  

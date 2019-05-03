@@ -1,0 +1,18 @@
+.loginView {
+  height: 100vh;
+}
+
+.loginView .layout-margin {
+  margin: 20px;
+}
+
+.loginView mat-card {
+  padding: 0px;
+}
+
+.loginView .mat-header {
+  text-align: center;
+  background: #1980c1;
+  color: #fff;
+  padding: 9px;
+}

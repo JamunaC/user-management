@@ -1,0 +1,17 @@
+.signupView {
+height: 100vh;
+}
+.signupView .layout-margin {
+margin: 20px;
+}
+
+.signupView mat-card {
+    padding: 0px;
+}
+
+.signupView .mat-header {
+    text-align: center;
+    background: #1980c1;
+    color: #fff;
+    padding: 9px;
+}

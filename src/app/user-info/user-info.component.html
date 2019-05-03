@@ -1,0 +1,27 @@
+<mat-toolbar color="primary" class="topnav">
+    <div class="topbar-branding">
+     User Information
+    </div>
+  
+    <ul style="position: absolute;right:0px;">
+      <li>
+        <button mat-button>
+          <mat-icon>account_circle</mat-icon>
+          <span style="color:white; font-size: 16px;"> {{ loggedUser.name.toUpperCase() }} </span>
+        </button>
+      </li>
+      <li>
+          <button mat-button (click)="logout()">
+              <mat-icon>power_settings_new</mat-icon>
+              <span style="color:white; font-size: 16px;"> LOGOUT </span>
+            </button>
+      </li>
+    </ul>
+  </mat-toolbar>
+
+  <mat-card class="layout-margin" fxLayout="row wrap" style="margin:30px;">
+   <div fxFlex="33"><span class="label-color">Name :</span> {{loggedUser.name}}</div>
+   <div fxFlex="33"><span class="label-color">Email :</span> {{loggedUser.email}}</div>
+   <div fxFlex="33"><span class="label-color">Mobile Number :</span> {{loggedUser.mobileno}}</div>
+   <div fxFlex="100" style="margin-top: 20px;"><span class="label-color">Address :</span> {{loggedUser.address}}</div>
+  </mat-card>
